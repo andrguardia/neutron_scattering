@@ -14,6 +14,9 @@
 		AB1599DF2996FACD00E06EDE /* neutron_scatteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1599DE2996FACD00E06EDE /* neutron_scatteringTests.swift */; };
 		AB1599E92996FACD00E06EDE /* neutron_scatteringUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1599E82996FACD00E06EDE /* neutron_scatteringUITests.swift */; };
 		AB1599EB2996FACD00E06EDE /* neutron_scatteringUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1599EA2996FACD00E06EDE /* neutron_scatteringUITestsLaunchTests.swift */; };
+		AB1599F82996FDEF00E06EDE /* Random Walk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1599F72996FDEF00E06EDE /* Random Walk.swift */; };
+		AB1599F92996FDEF00E06EDE /* Random Walk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1599F72996FDEF00E06EDE /* Random Walk.swift */; };
+		AB1599FA2996FDEF00E06EDE /* Random Walk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1599F72996FDEF00E06EDE /* Random Walk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,7 @@
 		AB1599E42996FACD00E06EDE /* neutron_scatteringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = neutron_scatteringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1599E82996FACD00E06EDE /* neutron_scatteringUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = neutron_scatteringUITests.swift; sourceTree = "<group>"; };
 		AB1599EA2996FACD00E06EDE /* neutron_scatteringUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = neutron_scatteringUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB1599F72996FDEF00E06EDE /* Random Walk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Random Walk.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				AB1599D02996FACD00E06EDE /* Assets.xcassets */,
 				AB1599D22996FACD00E06EDE /* neutron_scattering.entitlements */,
 				AB1599D32996FACD00E06EDE /* Preview Content */,
+				AB1599F72996FDEF00E06EDE /* Random Walk.swift */,
 			);
 			path = neutron_scattering;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1599F82996FDEF00E06EDE /* Random Walk.swift in Sources */,
 				AB1599CF2996FACC00E06EDE /* ContentView.swift in Sources */,
 				AB1599CD2996FACC00E06EDE /* neutron_scatteringApp.swift in Sources */,
 			);
@@ -268,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1599F92996FDEF00E06EDE /* Random Walk.swift in Sources */,
 				AB1599DF2996FACD00E06EDE /* neutron_scatteringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1599FA2996FDEF00E06EDE /* Random Walk.swift in Sources */,
 				AB1599EB2996FACD00E06EDE /* neutron_scatteringUITestsLaunchTests.swift in Sources */,
 				AB1599E92996FACD00E06EDE /* neutron_scatteringUITests.swift in Sources */,
 			);
