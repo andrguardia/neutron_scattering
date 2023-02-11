@@ -1,35 +1,34 @@
 //
-//  DrawingView.swift
-//  Valentine's Day
+//  SinglePathView.swift
+//  neutron_scattering
 //
-//  Created by Jeff Terry on 12/31/20.
+//  Created by IIT Phys 440 on 2/10/23.
 //
 
 import SwiftUI
 
-struct drawingView: View {
+struct SinglePathView: View {
     
-    @Binding var redLayer : [(xPoint: Double, yPoint: Double)]
-    @Binding var blueLayer : [(xPoint: Double, yPoint: Double)]
+    @Binding var boxWidth : Double
+    @Binding var boxHeight : Double
+    @Binding var singlePath: [(xPoint: Double, yPoint: Double)]
+    
     
     var body: some View {
     
         
         ZStack{
-        
-            drawIntegral(drawingPoints: redLayer )
-                .stroke(Color.red)
             
-            drawIntegral(drawingPoints: blueLayer )
-                .stroke(Color.black)
+            drawSinglePath(drawingPoints: singlePath)
+                .stroke(Color.green)
         }
-        .background(Color.white)
+        ///.background(Color.white)
         .aspectRatio(1, contentMode: .fill)
         
     }
 }
 
-struct DrawingView_Previews: PreviewProvider {
+struct SinglePathView_Previews: PreviewProvider {
     
     @State static var redLayer : [(xPoint: Double, yPoint: Double)] = [(10, 100), (10, 100), (0.0, 0.0), (0.0, 1.0)]
     @State static var blueLayer : [(xPoint: Double, yPoint: Double)] = [(10, 150), (2, 200), (1, 0.0)]
@@ -45,9 +44,9 @@ struct DrawingView_Previews: PreviewProvider {
 
 
 
-struct drawIntegral: Shape {
+struct drawSinglePath: Shape {
     
-   
+    
     let smoothness : CGFloat = 1.0
     var drawingPoints: [(xPoint: Double, yPoint: Double)]  ///Array of tuples
     
@@ -67,10 +66,8 @@ struct drawIntegral: Shape {
         
         for item in drawingPoints {
             
-            let myX = (item.xPoint-negativexOffset)*Double(scale)/displayRange
-            let myY = ((item.yPoint-negativeyOffset)*Double((-1.0/displayRange)*scale)+2.0*Double(center.y))
             
-            path.addRect(CGRect(x: myX, y: myY, width: 1.0 , height: 1.0) )
+            path.addRect(CGRect(x: (item.xPoint-negativexOffset)*Double(scale)/displayRange , y: ((item.yPoint-negativeyOffset)*Double((-1.0/displayRange)*scale)+2.0*Double(center.y)), width: 2.0 , height: 2.0) )
             
         }
 

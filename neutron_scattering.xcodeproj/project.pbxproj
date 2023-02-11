@@ -23,6 +23,9 @@
 		AB9AE26D29972CE3000F315F /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE26C29972CE3000F315F /* BoxView.swift */; };
 		AB9AE26E29972CE3000F315F /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE26C29972CE3000F315F /* BoxView.swift */; };
 		AB9AE26F29972CE3000F315F /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE26C29972CE3000F315F /* BoxView.swift */; };
+		AB9AE27129973963000F315F /* SinglePathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE27029973963000F315F /* SinglePathView.swift */; };
+		AB9AE27229973963000F315F /* SinglePathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE27029973963000F315F /* SinglePathView.swift */; };
+		AB9AE27329973963000F315F /* SinglePathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE27029973963000F315F /* SinglePathView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,7 @@
 		AB1599F72996FDEF00E06EDE /* Random Walk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Random Walk.swift"; sourceTree = "<group>"; };
 		AB1599FB299712AD00E06EDE /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		AB9AE26C29972CE3000F315F /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
+		AB9AE27029973963000F315F /* SinglePathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePathView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				AB1599F72996FDEF00E06EDE /* Random Walk.swift */,
 				AB1599FB299712AD00E06EDE /* DrawingView.swift */,
 				AB9AE26C29972CE3000F315F /* BoxView.swift */,
+				AB9AE27029973963000F315F /* SinglePathView.swift */,
 			);
 			path = neutron_scattering;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				AB9AE26D29972CE3000F315F /* BoxView.swift in Sources */,
 				AB1599CD2996FACC00E06EDE /* neutron_scatteringApp.swift in Sources */,
 				AB1599FC299712AD00E06EDE /* DrawingView.swift in Sources */,
+				AB9AE27129973963000F315F /* SinglePathView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +295,7 @@
 				AB9AE26E29972CE3000F315F /* BoxView.swift in Sources */,
 				AB1599FD299712AD00E06EDE /* DrawingView.swift in Sources */,
 				AB1599F92996FDEF00E06EDE /* Random Walk.swift in Sources */,
+				AB9AE27229973963000F315F /* SinglePathView.swift in Sources */,
 				AB1599DF2996FACD00E06EDE /* neutron_scatteringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +309,7 @@
 				AB9AE26F29972CE3000F315F /* BoxView.swift in Sources */,
 				AB1599E92996FACD00E06EDE /* neutron_scatteringUITests.swift in Sources */,
 				AB1599FE299712AD00E06EDE /* DrawingView.swift in Sources */,
+				AB9AE27329973963000F315F /* SinglePathView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

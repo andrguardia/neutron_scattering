@@ -26,6 +26,7 @@ class Random_Walk: ObservableObject {
     
     @Published var insideData = [(xPoint: Double, yPoint: Double)]()
     @Published var outsideData = [(xPoint: Double, yPoint: Double)]()
+    @Published var singlePath = [(xPoint: Double, yPoint: Double)]()
     
     
     
@@ -50,6 +51,11 @@ class Random_Walk: ObservableObject {
         
         while remaindingEnergy > 0 && randY >= 0.0 && randX < boxWidth && randY < boxHeight && randX >= 0.0 {
             remaindingEnergy = remaindingEnergy - energyLossPerCollision/100.0
+            
+            if neutronNumber==1{
+                singlePath.append((randX,randY))
+            }else{}
+            
             self.randomize()
         }
     }
@@ -72,9 +78,7 @@ class Random_Walk: ObservableObject {
             }
         }
         
-        print(insideData)
         leakProbability = (Double(outsideData.count)/Double(neutronNumber))*100
-        print(leakProbability)
     }
     
     

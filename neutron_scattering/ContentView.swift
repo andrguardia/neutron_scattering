@@ -10,9 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var boxHeightString: String = "10"
-    @State var boxWidthString: String = "10"
-    @State var beamHeightString: String = "5"
+    @State var boxHeightString: String = "5"
+    @State var boxWidthString: String = "5"
+    @State var beamHeightString: String = "4"
     @State var energyLossPerCollisionString: String = "10"
     @State var neutronNumberString: String = "100"
     @State var leakProbability: Double = 0.0
@@ -57,6 +57,8 @@ struct ContentView: View {
                         Button("Compute!", action: {self.calculate()})
                         
                         Button("Clear", action: {self.clear()})
+                        
+                        Button("Compute Single Particle Path", action: {self.singleParticle()})
                     }
                 }
                 HStack {
@@ -73,10 +75,13 @@ struct ContentView: View {
                 .padding()
                 .aspectRatio(1, contentMode: .fit)
                 
-                BoxView(boxWidth: $randomWalk.boxWidth, boxHeight:$randomWalk.boxHeight)
+            BoxView(boxWidth: $randomWalk.boxWidth, boxHeight:$randomWalk.boxHeight)
                 .padding()
                 .aspectRatio(1, contentMode: .fit)
-                
+            
+            SinglePathView(boxWidth: $randomWalk.boxWidth, boxHeight:$randomWalk.boxHeight, singlePath:$randomWalk.singlePath)
+                    .padding()
+                    .aspectRatio(1, contentMode: .fit)
                 
             }
             // Stop the window shrinking to zero.
@@ -106,7 +111,20 @@ struct ContentView: View {
         randomWalk.energyLossPerCollision = 0.0
         randomWalk.insideData = []
         randomWalk.outsideData = []
+        randomWalk.singlePath = []
         leakProbability = 0.0
+    }
+    
+    func singleParticle(){
+        self.clear()
+        randomWalk.boxHeight = Double(boxHeightString)!
+        randomWalk.boxWidth = Double(boxWidthString)!
+        randomWalk.neutronNumber = 1
+        randomWalk.beamHeight = Double(beamHeightString)!
+        randomWalk.energyLossPerCollision = Double(energyLossPerCollisionString)!
+        randomWalk.randomWalkComputation()
+        
+        print()
     }
 }
 
