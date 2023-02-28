@@ -48,8 +48,9 @@ class Random_Walk: ObservableObject {
         var remaindingEnergy: Double = initialEnergy
         randX = meanFreePath
         randY = beamHeight
+        let lowerEnergyBound = energyLossPerCollision/100.0
         
-        while remaindingEnergy > 0 && randY >= 0.0 && randX < boxWidth && randY < boxHeight && randX >= 0.0 {
+        while remaindingEnergy > lowerEnergyBound && randY >= 0.0 && randX < boxWidth && randY < boxHeight && randX >= 0.0 {
             remaindingEnergy = remaindingEnergy - energyLossPerCollision/100.0
             
             if neutronNumber==1{
