@@ -16,7 +16,7 @@ struct BoxView: View {
     
         
         ZStack{
-            
+            //Create layers for plotting
             var blueLayer = [(xPoint: 0.0, yPoint: 0.0), (xPoint: boxWidth, yPoint: 0.0), (xPoint: boxWidth, yPoint: boxHeight), (xPoint: 0.0, yPoint: boxHeight), (xPoint: 0.0, yPoint: 0.0)]
             
             drawBox(drawingPoints: blueLayer )
